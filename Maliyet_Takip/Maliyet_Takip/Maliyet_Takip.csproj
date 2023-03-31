@@ -1,0 +1,918 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8EB1E96C-B611-48B7-931F-0D44978ECD66}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Maliyet_Takip</RootNamespace>
+    <AssemblyName>Maliyet_Takip</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.Charts.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Export, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v19.2.UI, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v19.2.Extensions, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.3\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnaForm.Designer.cs">
+      <DependentUpon>AnaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AyarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AyarForm.Designer.cs">
+      <DependentUpon>AyarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetler.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetler.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\DokumParametreleri.cs" />
+    <Compile Include="Entities\IBaseEntity.cs" />
+    <Compile Include="Enums\DokumSekli.cs" />
+    <Compile Include="Enums\DosyaTuru.cs" />
+    <Compile Include="Enums\EvetHayir.cs" />
+    <Compile Include="Enums\Gorevler.cs" />
+    <Compile Include="Enums\IslemTuru.cs" />
+    <Compile Include="Enums\KartTuru.cs" />
+    <Compile Include="Enums\RaporuKagidaSigdir.cs" />
+    <Compile Include="Enums\YazdirmaSekli.cs" />
+    <Compile Include="Enums\YazdirmaYonu.cs" />
+    <Compile Include="Forms\AyarForms\AyarEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AyarForms\AyarEditForm.Designer.cs">
+      <DependentUpon>AyarEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BaseForms\BaseEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BaseForms\BaseEditForm.Designer.cs">
+      <DependentUpon>BaseEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BaseForms\BaseListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BaseForms\BaseListForm.Designer.cs">
+      <DependentUpon>BaseListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BirimForms\BirimEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BirimForms\BirimEditForm.Designer.cs">
+      <DependentUpon>BirimEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BirimForms\BirimListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BirimForms\BirimListForm.Designer.cs">
+      <DependentUpon>BirimListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CariForms\CariEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CariForms\CariEditForm.Designer.cs">
+      <DependentUpon>CariEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CariForms\CariListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CariForms\CariListForm.Designer.cs">
+      <DependentUpon>CariListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DonemForms\DonemEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DonemForms\DonemEditForm.Designer.cs">
+      <DependentUpon>DonemEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DonemForms\DonemListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DonemForms\DonemListForm.Designer.cs">
+      <DependentUpon>DonemListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GiderForms\GiderListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GiderForms\GiderListForm.Designer.cs">
+      <DependentUpon>GiderListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GiderForms\GiderEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GiderForms\GiderEditForm.Designer.cs">
+      <DependentUpon>GiderEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HareketForms\DepolarArasiSevkForms\MamulDepoListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HareketForms\DepolarArasiSevkForms\MamulDepoListForm.Designer.cs">
+      <DependentUpon>MamulDepoListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HareketForms\DepolarArasiSevkForms\AnaDepoListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HareketForms\DepolarArasiSevkForms\AnaDepoListForm.Designer.cs">
+      <DependentUpon>AnaDepoListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HareketForms\HammaddeHareketForms\DepolarArasiSevkEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HareketForms\HammaddeHareketForms\DepolarArasiSevkEditForm.Designer.cs">
+      <DependentUpon>DepolarArasiSevkEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HareketForms\HammaddeHareketForms\DepolarArasiSevkListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HareketForms\HammaddeHareketForms\DepolarArasiSevkListForm.Designer.cs">
+      <DependentUpon>DepolarArasiSevkListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HareketForms\HammaddeHareketForms\HammaddeAlisEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HareketForms\HammaddeHareketForms\HammaddeAlisEditForm.Designer.cs">
+      <DependentUpon>HammaddeAlisEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HareketForms\HammaddeHareketForms\HammaddeAlisListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HareketForms\HammaddeHareketForms\HammaddeAlisListForm.Designer.cs">
+      <DependentUpon>HammaddeAlisListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HareketForms\HammaddeHareketForms\HammaddeHareketleri.cs" />
+    <Compile Include="Forms\HareketForms\HammaddeHareketForms\KalanHammadde.cs" />
+    <Compile Include="Forms\HareketForms\MamulHareketForms\MamulSevkEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HareketForms\MamulHareketForms\MamulSevkEditForm.Designer.cs">
+      <DependentUpon>MamulSevkEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HareketForms\MamulHareketForms\MamulSevkListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HareketForms\MamulHareketForms\MamulSevkListForm.Designer.cs">
+      <DependentUpon>MamulSevkListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HareketForms\MamulHareketForms\KalanMamul.cs" />
+    <Compile Include="Forms\HareketForms\MamulHareketForms\MamulSatisSevkListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HareketForms\MamulHareketForms\MamulSatisSevkListForm.Designer.cs">
+      <DependentUpon>MamulSatisSevkListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HareketForms\MamulHareketForms\MamulSatisEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HareketForms\MamulHareketForms\MamulSatisEditForm.Designer.cs">
+      <DependentUpon>MamulSatisEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HareketForms\MamulHareketForms\KullanilacakHammadde.cs" />
+    <Compile Include="Forms\HareketForms\MamulHareketForms\MaliyetOlusturmaEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HareketForms\MamulHareketForms\MaliyetOlusturmaEditForm.Designer.cs">
+      <DependentUpon>MaliyetOlusturmaEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HareketForms\MamulHareketForms\MaliyetOlusturmaListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HareketForms\MamulHareketForms\MaliyetOlusturmaListForm.Designer.cs">
+      <DependentUpon>MaliyetOlusturmaListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KullaniciForms\KullaniciEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KullaniciForms\KullaniciEditForm.Designer.cs">
+      <DependentUpon>KullaniciEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KullaniciForms\KullaniciListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KullaniciForms\KullaniciListForm.Designer.cs">
+      <DependentUpon>KullaniciListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KullaniciForms\KullaniciSorguForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KullaniciForms\KullaniciSorguForm.Designer.cs">
+      <DependentUpon>KullaniciSorguForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KullaniciForms\SifreDegistirEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KullaniciForms\SifreDegistirEditForm.Designer.cs">
+      <DependentUpon>SifreDegistirEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MamulForms\MamulListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MamulForms\MamulListForm.Designer.cs">
+      <DependentUpon>MamulListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MamulForms\MamulGrupListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MamulForms\MamulGrupListForm.Designer.cs">
+      <DependentUpon>MamulGrupListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MamulForms\MamulGrupEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MamulForms\MamulGrupEditForm.Designer.cs">
+      <DependentUpon>MamulGrupEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MamulForms\MamulEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MamulForms\MamulEditForm.Designer.cs">
+      <DependentUpon>MamulEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RaporOnizleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RaporOnizleme.Designer.cs">
+      <DependentUpon>RaporOnizleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HammaddeForms\Hammadde,GrupEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HammaddeForms\Hammadde,GrupEditForm.Designer.cs">
+      <DependentUpon>Hammadde,GrupEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HammaddeForms\HammaddeEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HammaddeForms\HammaddeEditForm.Designer.cs">
+      <DependentUpon>HammaddeEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HammaddeForms\HammaddeGrupListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HammaddeForms\HammaddeGrupListForm.Designer.cs">
+      <DependentUpon>HammaddeGrupListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HammaddeForms\HammaddeListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HammaddeForms\HammaddeListForm.Designer.cs">
+      <DependentUpon>HammaddeListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Rapors\MaliyetRapor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Rapors\MaliyetRapor.Designer.cs">
+      <DependentUpon>MaliyetRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TabloDokumParametreleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TabloDokumParametreleri.Designer.cs">
+      <DependentUpon>TabloDokumParametreleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UnvanForms\UnvanEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UnvanForms\UnvanEditForm.Designer.cs">
+      <DependentUpon>UnvanEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UnvanForms\UnvanListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UnvanForms\UnvanListForm.Designer.cs">
+      <DependentUpon>UnvanListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Functions\Baglanti.cs" />
+    <Compile Include="Functions\EnumFunctions.cs" />
+    <Compile Include="Functions\FileFunctions.cs" />
+    <Compile Include="Functions\Formlar.cs" />
+    <Compile Include="Functions\GeneralFunctions.cs" />
+    <Compile Include="Functions\Mesajlar.cs" />
+    <Compile Include="Functions\Numara.cs" />
+    <Compile Include="Functions\Resimleme.cs" />
+    <Compile Include="Functions\ShowEditforms.cs" />
+    <Compile Include="Functions\ShowRibbonForms.cs" />
+    <Compile Include="Functions\Sifrele.cs" />
+    <Compile Include="Functions\SqlKomut.cs" />
+    <Compile Include="Functions\TablePrintingFunctions.cs" />
+    <Compile Include="Functions\YedekAl.cs" />
+    <Compile Include="GirisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GirisForm.Designer.cs">
+      <DependentUpon>GirisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IBaseFormshow.cs" />
+    <Compile Include="Interfaces\IStatusBarAciklama.cs" />
+    <Compile Include="Interfaces\IStatusBarKisayol.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControl\AButtonEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\ACalcEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\ACheckedComboboxEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\ACheckEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\ACodeTextEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\AComboBoxEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\ADataLayoutControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\ADateedit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\AFilterControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\AGridControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\AHyperLinkLabelControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\AIbanTextEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\ALookUpEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\AMailTextEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\AMemoEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\AMoneyEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\APhoneNoTextEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\APictureEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\ASpinEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\ATCIdentityTextEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\ATextEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\AToogleSwitch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControl\AXtraReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="AnaForm.resx">
+      <DependentUpon>AnaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AyarForm.resx">
+      <DependentUpon>AyarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AyarForms\AyarEditForm.resx">
+      <DependentUpon>AyarEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BaseForms\BaseEditForm.resx">
+      <DependentUpon>BaseEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BaseForms\BaseListForm.resx">
+      <DependentUpon>BaseListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BirimForms\BirimEditForm.resx">
+      <DependentUpon>BirimEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BirimForms\BirimListForm.resx">
+      <DependentUpon>BirimListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CariForms\CariEditForm.resx">
+      <DependentUpon>CariEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CariForms\CariListForm.resx">
+      <DependentUpon>CariListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DonemForms\DonemEditForm.resx">
+      <DependentUpon>DonemEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DonemForms\DonemListForm.resx">
+      <DependentUpon>DonemListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GiderForms\GiderListForm.resx">
+      <DependentUpon>GiderListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GiderForms\GiderEditForm.resx">
+      <DependentUpon>GiderEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HareketForms\DepolarArasiSevkForms\MamulDepoListForm.resx">
+      <DependentUpon>MamulDepoListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HareketForms\DepolarArasiSevkForms\AnaDepoListForm.resx">
+      <DependentUpon>AnaDepoListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HareketForms\HammaddeHareketForms\DepolarArasiSevkEditForm.resx">
+      <DependentUpon>DepolarArasiSevkEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HareketForms\HammaddeHareketForms\DepolarArasiSevkListForm.resx">
+      <DependentUpon>DepolarArasiSevkListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HareketForms\HammaddeHareketForms\HammaddeAlisEditForm.resx">
+      <DependentUpon>HammaddeAlisEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HareketForms\HammaddeHareketForms\HammaddeAlisListForm.resx">
+      <DependentUpon>HammaddeAlisListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HareketForms\MamulHareketForms\MamulSevkEditForm.resx">
+      <DependentUpon>MamulSevkEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HareketForms\MamulHareketForms\MamulSevkListForm.resx">
+      <DependentUpon>MamulSevkListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HareketForms\MamulHareketForms\MamulSatisSevkListForm.resx">
+      <DependentUpon>MamulSatisSevkListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HareketForms\MamulHareketForms\MamulSatisEditForm.resx">
+      <DependentUpon>MamulSatisEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HareketForms\MamulHareketForms\MaliyetOlusturmaEditForm.resx">
+      <DependentUpon>MaliyetOlusturmaEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HareketForms\MamulHareketForms\MaliyetOlusturmaListForm.resx">
+      <DependentUpon>MaliyetOlusturmaListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KullaniciForms\KullaniciEditForm.resx">
+      <DependentUpon>KullaniciEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KullaniciForms\KullaniciListForm.resx">
+      <DependentUpon>KullaniciListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KullaniciForms\KullaniciSorguForm.resx">
+      <DependentUpon>KullaniciSorguForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KullaniciForms\SifreDegistirEditForm.resx">
+      <DependentUpon>SifreDegistirEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MamulForms\MamulListForm.resx">
+      <DependentUpon>MamulListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MamulForms\MamulGrupListForm.resx">
+      <DependentUpon>MamulGrupListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MamulForms\MamulGrupEditForm.resx">
+      <DependentUpon>MamulGrupEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MamulForms\MamulEditForm.resx">
+      <DependentUpon>MamulEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RaporOnizleme.resx">
+      <DependentUpon>RaporOnizleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HammaddeForms\Hammadde,GrupEditForm.resx">
+      <DependentUpon>Hammadde,GrupEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HammaddeForms\HammaddeEditForm.resx">
+      <DependentUpon>HammaddeEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HammaddeForms\HammaddeGrupListForm.resx">
+      <DependentUpon>HammaddeGrupListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HammaddeForms\HammaddeListForm.resx">
+      <DependentUpon>HammaddeListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Rapors\MaliyetRapor.resx">
+      <DependentUpon>MaliyetRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TabloDokumParametreleri.resx">
+      <DependentUpon>TabloDokumParametreleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UnvanForms\UnvanListForm.resx">
+      <DependentUpon>UnvanListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GirisForm.resx">
+      <DependentUpon>GirisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="DataSetler.xsc">
+      <DependentUpon>DataSetler.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetler.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetler.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetler.xss">
+      <DependentUpon>DataSetler.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addfile_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\security-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\secure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iydb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\publicfix_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\publicfix_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bodetails_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bodetails_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addfile_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deletelist2_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deletelist2_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preview_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preview_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\suggestion_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\columns_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\columns_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveto_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveto_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bouser_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bouser_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxlsx_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttoxlsx_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttodocx_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttodocx_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttopdf_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttopdf_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttotxt_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exporttotxt_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customizegrid_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\publicfix_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\publicfix_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newtask_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newtask_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\geopointmap_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\geopointmap_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iydb-ico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editrangepermission_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bopermission_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bopermission_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documentmap_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\encrypt_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\encrypt_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stok_Grup16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stok_Grup32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mahkum16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mahkum32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giris.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stok_Kartı32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stok_Kartı16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insertdatafield_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\build_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\build_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adateoccurring_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adateoccurring_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cari_Kart16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cari_Kart32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insertdatafield_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boreport_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Siparis_Onaylanan16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Siparis_Onaylanan32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stok_Hareket32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stok_Hareket16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BankaEFT32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BankaEFT16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fatura_Satis16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fatura_Satis32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boorderitem_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boorderitem_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mamul_Hareket_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mamul_Hareket_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mamul_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mamul_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\packageproduct_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\packageproduct_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3dcylinder_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3dcylinder_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report_16x16.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
